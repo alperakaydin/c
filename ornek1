@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*
+this code is calculate that
+1/1! + (1+2)/2! + (1+....+n)/n! = ???  
+*/
+int main()
+{
+    float i,t,c,n,sonuc;
+    printf("sayi giriniz");
+    scanf("%f",&n);
+    t=0,c=1,sonuc=0;
+    for(i=1;n>0;i++){
+        t=t+n;
+        c=c*n;
+        sonuc=sonuc + (t/c);
+        n--;
+        printf("toplam %f carpim %.3f sonucdongu %.3f\n",t,c,sonuc);
+        }
+    printf("sonuc %f",sonuc);
+
+    return 0;
+}
