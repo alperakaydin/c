@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#define PI 3,14
+#define PI 3.1416
 /*
 The general equation for a straight line in the cartesian coordinate is Ax+By+C=0.
 The arrangement status of two lines can be one of the followings:
@@ -23,7 +23,7 @@ int main()
     scanf("%f%f%f",&a2,&b2,&c2);
     printf("%.2f %.2f %.2f\n",a2,b2,c2);
 
-    slope= (a1*b2-a2*b1)/(a1*a2-b1*b2);
+    slope= (a1*b2-a2*b1)/(a1*a2+b1*b2);
     angel=(atan(slope)*180)/PI;
     x0=(b1*c2-b2*c1)/(a1*b2-a2*b1);
     y0=(c1*a2-c2*a1)/(a1*b2-a2*b1);
