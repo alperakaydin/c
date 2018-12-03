@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#define PI 3.14
-/* 
+#define PI 3,14
+/*
 The general equation for a straight line in the cartesian coordinate is Ax+By+C=0.
 The arrangement status of two lines can be one of the followings:
 • The two lines “intersect” with α angle.
 • The two lines are “perpendicular” with 90 degrees.
 • The two lines “coincide”. (They lie on the same straight line.)
-• The two lines are “parallel”. 
+• The two lines are “parallel”.
 
 */
 int main()
@@ -17,11 +17,11 @@ int main()
     float a1,b1,c1,a2,b2,c2,angel,slope,x0,y0,d;
     printf("Please Enter A1,B1,C1");
     scanf("%f%f%f",&a1,&b1,&c1);
-    printf("%f %f %f",a1,b1,c1);
+    printf("%.2f %.2f %.2f",a1,b1,c1);
 
     printf("Please Enter A2,B2,C2");
     scanf("%f%f%f",&a2,&b2,&c2);
-    printf("%f %f %f\n",a2,b2,c2);
+    printf("%.2f %.2f %.2f\n",a2,b2,c2);
 
     slope= (a1*b2-a2*b1)/(a1*a2-b1*b2);
     angel=(atan(slope)*180)/PI;
@@ -29,21 +29,22 @@ int main()
     y0=(c1*a2-c2*a1)/(a1*b2-a2*b1);
     d=(fabs(c1-c2))/(sqrt(a1*a1+b1*b1));
 
-    if((a1/a2)!=(b1/b2)){  
+    if((a1/a2)!=(b1/b2)){
         printf("intersection lines\n");
-        printf("alpha : %f3\n",angel);
-        printf("intersection point : (%f3,%f3)\n",x0,y0);
+        printf("alpha : %.2f\n",angel);
+        printf("intersection point : (%.2f,%.2f)\n",x0,y0);
     }
+
 
     else if ((a1/a2)==(b1/b2) & (b1/b2) != (c1/c2)){
         printf("Parallel lines\n");
-        printf("distance : %f3\n",d);
+        printf("distance : %.2f\n",d);
 
     }
 
     else if(((a1*a2)+(b1*b2))==0){
         printf("Perpendicular lines\n");
-        printf("Intersection point : (%f3,%f3)\n",x0,y0);
+        printf("Intersection point : (%.2f,%.2f)\n",x0,y0);
     }
 
     else{
